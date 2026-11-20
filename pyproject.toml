@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloves"
+version = "2.0.1"
+description = "Cleft-Overstep Optimization for Deep Neural Networks & LLMs"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = [
+    "deep-learning",
+    "optimizer",
+    "pytorch",
+    "optimization",
+    "llm",
+    "cleft-overstep",
+    "adamw",
+    "lion",
+    "muon"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "torch>=1.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "build",
+    "twine"
+]
+
+[project.urls]
+Homepage = "https://github.com/huynhldvn/CLOVES"
+Documentation = "https://github.com/huynhldvn/CLOVES#readme"
+Repository = "https://github.com/huynhldvn/CLOVES.git"
+Issues = "https://github.com/huynhldvn/CLOVES/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
